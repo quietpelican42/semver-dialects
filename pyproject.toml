@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "semver-dialects"
+version = "0.1.0"
+description = "Version constraints that behave like Go's Masterminds/semver (Helm) and hashicorp/go-version (Terraform), checked against both libraries."
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [{name = "__AUTHOR__"}]
+keywords = ["semver", "helm", "terraform", "version-constraints", "masterminds", "go-version"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Typing :: Typed",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "mypy>=1.10"]
+bench = ["poetry-core", "semantic-version", "node-semver", "semver"]
+
+[project.urls]
+Repository = "https://github.com/__GH_OWNER__/semver-dialects"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+semver_dialects = ["py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.mypy]
+strict = true
+files = ["src", "tests"]
