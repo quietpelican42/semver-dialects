@@ -9,7 +9,7 @@ description = "Version constraints that behave like Go's Masterminds/semver (Hel
 readme = "README.md"
 requires-python = ">=3.11"
 license = {text = "MIT"}
-authors = [{name = "__AUTHOR__"}]
+authors = [{name = "kofiadeyemiq"}]
 keywords = ["semver", "helm", "terraform", "version-constraints", "masterminds", "go-version"]
 classifiers = [
   "Programming Language :: Python :: 3",
@@ -22,7 +22,7 @@ dev = ["pytest>=8", "mypy>=1.10"]
 bench = ["poetry-core", "semantic-version", "node-semver", "semver"]
 
 [project.urls]
-Repository = "https://github.com/__GH_OWNER__/semver-dialects"
+Repository = "https://github.com/quietpelican42/semver-dialects"
 
 [tool.setuptools.packages.find]
 where = ["src"]
